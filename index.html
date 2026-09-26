@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MAN FASHION WEAR | Deoria</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    background:#fbf7f2;
+    color:#30251f;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#30251f;
+    color:white;
+    text-align:center;
+    padding:9px 15px;
+    font-size:12px;
+    letter-spacing:.6px;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(251,247,242,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #eaded3;
+}
+
+.nav-inner{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#a76f4e;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#a76f4e;
+}
+
+.nav-btn{
+    background:#30251f;
+    color:white;
+    padding:12px 20px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.nav-btn:hover{
+    background:#a76f4e;
+    transform:translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(251,247,242,.98) 0%,
+        rgba(251,247,242,.90) 40%,
+        rgba(251,247,242,.20) 100%
+    ),
+    url("https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=1600&q=85");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:610px;
+    padding:80px 0;
+}
+
+.small-title{
+    color:#a76f4e;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:16px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(48px,7vw,82px);
+    line-height:1;
+    margin-bottom:24px;
+}
+
+.hero h1 span{
+    color:#a76f4e;
+}
+
+.hero p{
+    font-size:17px;
+    color:#665850;
+    max-width:510px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 25px;
+    border-radius:30px;
+    font-weight:700;
+    font-size:14px;
+    transition:.3s;
+    display:inline-block;
+}
+
+.btn-dark{
+    background:#30251f;
+    color:white;
+}
+
+.btn-dark:hover{
+    background:#a76f4e;
+    transform:translateY(-3px);
+}
+
+.btn-light{
+    border:1px solid #30251f;
+    background:#fffaf5;
+}
+
+.btn-light:hover{
+    background:#30251f;
+    color:white;
+}
+
+/* COMMON SECTION */
+
+section{
+    padding:90px 0;
+}
+
+.section-head{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-head h2{
+    font-family:'Playfair Display',serif;
+    font-size:43px;
+    margin-bottom:10px;
+}
+
+.section-head p{
+    color:#766960;
+}
+
+/* COLLECTIONS */
+
+.collections{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.collection{
+    height:390px;
+    border-radius:22px;
+    overflow:hidden;
+    position:relative;
+}
+
+.collection img{
+    height:100%;
+    transition:.6s;
+}
+
+.collection:hover img{
+    transform:scale(1.07);
+}
+
+.collection-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 42%,
+        rgba(20,15,12,.85)
+    );
+    display:flex;
+    align-items:flex-end;
+    padding:28px;
+    color:white;
+}
+
+.collection-overlay h3{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product{
+    background:white;
+    border:1px solid #eee2d8;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(48,37,31,.10);
+}
+
+.product-img{
+    height:300px;
+    overflow:hidden;
+    position:relative;
+}
+
+.product-img img{
+    height:100%;
+    transition:.5s;
+}
+
+.product:hover .product-img img{
+    transform:scale(1.05);
+}
+
+.badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#30251f;
+    color:white;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:700;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info small{
+    color:#a76f4e;
+    font-weight:700;
+}
+
+.product-info h3{
+    font-size:16px;
+    margin:5px 0;
+}
+
+.price{
+    font-weight:800;
+    font-size:18px;
+    margin:10px 0 15px;
+}
+
+.order-btn{
+    display:block;
+    text-align:center;
+    width:100%;
+    background:#30251f;
+    color:white;
+    padding:11px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    background:#a76f4e;
+}
+
+/* OFFER */
+
+.offer{
+    background:#30251f;
+    color:white;
+}
+
+.offer-box{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.offer-box .small-title{
+    color:#d9a77f;
+}
+
+.offer-box h2{
+    font-family:'Playfair Display',serif;
+    font-size:48px;
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.offer-box p{
+    color:#ddd0c8;
+    margin-bottom:25px;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-img{
+    height:520px;
+    border-radius:25px;
+    overflow:hidden;
+}
+
+.about-img img{
+    height:100%;
+}
+
+.about-content h2{
+    font-family:'Playfair Display',serif;
+    font-size:45px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:#6f625b;
+    margin-bottom:16px;
+}
+
+.about-list{
+    margin-top:25px;
+    display:grid;
+    gap:12px;
+}
+
+.about-list div{
+    background:#f1e6dc;
+    padding:12px 16px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+/* STATS */
+
+.stats{
+    background:#f0e5db;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+    gap:20px;
+}
+
+.stat h3{
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    color:#a76f4e;
+}
+
+.stat p{
+    font-size:13px;
+    color:#665850;
+}
+
+/* REVIEWS */
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review{
+    background:white;
+    border:1px solid #eee2d8;
+    padding:28px;
+    border-radius:20px;
+}
+
+.stars{
+    color:#b67b51;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.review p{
+    color:#665850;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.review strong{
+    font-size:14px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#fffaf5;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-card{
+    background:white;
+    border:1px solid #eaded3;
+    border-radius:20px;
+    padding:30px;
+}
+
+.contact-card h3{
+    font-family:'Playfair Display',serif;
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.contact-item{
+    padding:13px 0;
+    border-bottom:1px solid #eee2d8;
+}
+
+.contact-item:last-child{
+    border-bottom:none;
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:3px;
+}
+
+.contact-item span{
+    color:#6f625b;
+    font-size:14px;
+}
+
+.map-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#30251f;
+    color:white;
+    padding:13px 20px;
+    border-radius:25px;
+    font-weight:700;
+    font-size:13px;
+}
+
+.map-btn:hover{
+    background:#a76f4e;
+}
+
+/* CTA */
+
+.cta{
+    padding:80px 0;
+}
+
+.cta-box{
+    background:#e9d7c8;
+    border-radius:30px;
+    padding:55px 30px;
+    text-align:center;
+}
+
+.cta-box h2{
+    font-family:'Playfair Display',serif;
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.cta-box p{
+    color:#665850;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#30251f;
+    color:white;
+    padding:55px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:35px;
+}
+
+.footer-brand h2{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.footer-brand h2 span{
+    color:#d6a57e;
+}
+
+.footer-brand p{
+    color:#cbbdb5;
+    max-width:350px;
+    font-size:14px;
+}
+
+.footer-col h4{
+    margin-bottom:15px;
+}
+
+.footer-col a{
+    display:block;
+    color:#cbbdb5;
+    font-size:14px;
+    margin:8px 0;
+}
+
+.footer-col a:hover{
+    color:white;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding-top:20px;
+    text-align:center;
+    color:#bbaea6;
+    font-size:12px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    z-index:999;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:600px;
+        background:
+        linear-gradient(
+            90deg,
+            rgba(251,247,242,.96),
+            rgba(251,247,242,.70)
+        ),
+        url("https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=1200&q=85");
+        background-position:center;
+    }
+
+    .collections{
+        grid-template-columns:1fr;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-img{
+        height:400px;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .reviews{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    .container{
+        width:92%;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .nav-inner{
+        min-height:68px;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .nav-btn{
+        padding:10px 15px;
+        font-size:11px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .section-head h2,
+    .about-content h2{
+        font-size:36px;
+    }
+
+    .products{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .product-img{
+        height:220px;
+    }
+
+    .product-info{
+        padding:13px;
+    }
+
+    .product-info h3{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:16px;
+    }
+
+    .collection{
+        height:330px;
+    }
+
+    .offer-box h2,
+    .cta-box h2{
+        font-size:36px;
+    }
+
+    .stats-grid{
+        gap:12px;
+    }
+
+    .stat h3{
+        font-size:30px;
+    }
+
+    .whatsapp{
+        width:54px;
+        height:54px;
+        right:15px;
+        bottom:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    ✨ NEW COLLECTION 2026 • VISIT MAN FASHION WEAR • DEORIA
+</div>
+
+<!-- NAVBAR -->
+<nav>
+<div class="container nav-inner">
+
+    <a href="#home" class="logo">
+        MAN <span>FASHION WEAR</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <a class="nav-btn" href="#shop">
+        SHOP NOW
+    </a>
+
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+
+<div class="hero-content">
+
+    <div class="small-title">
+        Premium Men's Fashion • Deoria
+    </div>
+
+    <h1>
+        Style That<br>
+        <span>Defines You.</span>
+    </h1>
+
+    <p>
+        Discover stylish shirts, t-shirts, denim and premium men's
+        fashion at MAN FASHION WEAR. Fresh styles, comfortable fits
+        and a look made for you.
+    </p>
+
+    <div class="buttons">
+        <a href="#shop" class="btn btn-dark">
+            Explore Collection →
+        </a>
+
+        <a href="#contact" class="btn btn-light">
+            Visit Store
+        </a>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+<!-- COLLECTIONS -->
+<section id="collections">
+
+<div class="container">
+
+<div class="section-head">
+    <div class="small-title">Shop By Style</div>
+    <h2>Our Collections</h2>
+    <p>Find your perfect everyday style.</p>
+</div>
+
+<div class="collections">
+
+    <a href="#shop" class="collection">
+        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=80">
+        <div class="collection-overlay">
+            <h3>Shirts</h3>
+        </div>
+    </a>
+
+    <a href="#shop" class="collection">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80">
+        <div class="collection-overlay">
+            <h3>T-Shirts</h3>
+        </div>
+    </a>
+
+    <a href="#shop" class="collection">
+        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=80">
+        <div class="collection-overlay">
+            <h3>Denim</h3>
+        </div>
+    </a>
+
+</div>
+
+</div>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+
+<div class="container">
+
+<div class="section-head">
+    <div class="small-title">New Arrivals</div>
+    <h2>Trending Now</h2>
+    <p>Premium looks for every occasion.</p>
+</div>
+
+<div class="products">
+
+    <div class="product">
+        <div class="product-img">
+            <span class="badge">NEW</span>
+            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=80">
+        </div>
+        <div class="product-info">
+            <small>SHIRTS</small>
+            <h3>Classic White Shirt</h3>
+            <div class="price">₹899</div>
+            <a class="order-btn" onclick="orderProduct('Classic White Shirt')">
+                Enquire on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-img">
+            <span class="badge">POPULAR</span>
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80">
+        </div>
+        <div class="product-info">
+            <small>T-SHIRTS</small>
+            <h3>Essential Black Tee</h3>
+            <div class="price">₹699</div>
+            <a class="order-btn" onclick="orderProduct('Essential Black Tee')">
+                Enquire on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80">
+        </div>
+        <div class="product-info">
+            <small>DENIM</small>
+            <h3>Classic Blue Denim</h3>
+            <div class="price">₹1,299</div>
+            <a class="order-btn" onclick="orderProduct('Classic Blue Denim')">
+                Enquire on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-img">
+            <span class="badge">TRENDING</span>
+            <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80">
+        </div>
+        <div class="product-info">
+            <small>SHIRTS</small>
+            <h3>Beige Casual Shirt</h3>
+            <div class="price">₹999</div>
+            <a class="order-btn" onclick="orderProduct('Beige Casual Shirt')">
+                Enquire on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=700&q=80">
+        </div>
+        <div class="product-info">
+            <small>POLO</small>
+            <h3>Everyday Polo</h3>
+            <div class="price">₹799</div>
+            <a class="order-btn" onclick="orderProduct('Everyday Polo')">
+                Enquire on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-img">
+            <span class="badge">NEW</span>
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80">
+        </div>
+        <div class="product-info">
+            <small>JACKETS</small>
+            <h3>Premium Denim Jacket</h3>
+            <div class="price">₹1,799</div>
+            <a class="order-btn" onclick="orderProduct('Premium Denim Jacket')">
+                Enquire on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?auto=format&fit=crop&w=700&q=80">
+        </div>
+        <div class="product-info">
+            <small>FORMAL</small>
+            <h3>Smart Formal Shirt</h3>
+            <div class="price">₹949</div>
+            <a class="order-btn" onclick="orderProduct('Smart Formal Shirt')">
+                Enquire on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-img">
+            <span class="badge">PREMIUM</span>
+            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=80">
+        </div>
+        <div class="product-info">
+            <small>OUTERWEAR</small>
+            <h3>Premium Black Jacket</h3>
+            <div class="price">₹1,999</div>
+            <a class="order-btn" onclick="orderProduct('Premium Black Jacket')">
+                Enquire on WhatsApp
+            </a>
+        </div>
+    </div>
+
+</div>
+</div>
+</section>
+
+<!-- OFFER -->
+<section class="offer">
+
+<div class="container">
+
+<div class="offer-box">
+
+    <div class="small-title">
+        Special Store Offer
+    </div>
+
+    <h2>
+        Upgrade Your<br>Wardrobe.
+    </h2>
+
+    <p>
+        Visit MAN FASHION WEAR, Deoria and explore the latest
+        collection of men's fashion.
+    </p>
+
+    <a href="#contact" class="btn btn-light">
+        Visit Us Today
+    </a>
+
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+    <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=85">
+    </div>
+
+    <div class="about-content">
+
+        <div class="small-title">
+            About Us
+        </div>
+
+        <h2>
+            Fashion Made<br>
+            For Men.
+        </h2>
+
+        <p>
+            MAN FASHION WEAR is your destination for stylish,
+            comfortable and modern men's fashion in Deoria.
+        </p>
+
+        <p>
+            From everyday casuals to smart outfits, discover
+            carefully selected styles that help you look your best.
+        </p>
+
+        <div class="about-list">
+            <div>✓ Latest Fashion Collection</div>
+            <div>✓ Comfortable & Stylish Fits</div>
+            <div>✓ Affordable Prices</div>
+            <div>✓ Friendly Store Experience</div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+    <div class="stat">
+        <h3>500+</h3>
+        <p>Fashion Styles</p>
+    </div>
+
+    <div class="stat">
+        <h3>1K+</h3>
+        <p>Happy Customers</p>
+    </div>
+
+    <div class="stat">
+        <h3>100%</h3>
+        <p>Style Focused</p>
+    </div>
+
+    <div class="stat">
+        <h3>2026</h3>
+        <p>New Collection</p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+
+<div class="container">
+
+<div class="section-head">
+    <div class="small-title">Customer Love</div>
+    <h2>What Customers Say</h2>
+</div>
+
+<div class="reviews">
+
+    <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+            Great collection and very good quality. The styles
+            are modern and comfortable.
+        </p>
+        <strong>Happy Customer</strong>
+    </div>
+
+    <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+            Loved the collection. Good options for both casual
+            and formal looks.
+        </p>
+        <strong>Happy Customer</strong>
+    </div>
+
+    <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+            Nice collection and friendly shopping experience.
+            Definitely worth visiting.
+        </p>
+        <strong>Happy Customer</strong>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-head">
+    <div class="small-title">Come Visit Us</div>
+    <h2>Find Our Store</h2>
+    <p>We would love to see you at MAN FASHION WEAR.</p>
+</div>
+
+<div class="contact-grid">
+
+    <div class="contact-card">
+
+        <h3>Store Details</h3>
+
+        <div class="contact-item">
+            <strong>📍 Location</strong>
+            <span>Deoria, Uttar Pradesh, India</span>
+        </div>
+
+        <div class="contact-item">
+            <strong>🕐 Opening Hours</strong>
+            <span>10:00 AM – 9:30 PM</span>
+        </div>
+
+        <div class="contact-item">
+            <strong>👔 Category</strong>
+            <span>Men's Fashion • Shirts • T-Shirts • Denim</span>
+        </div>
+
+        <a
+        class="map-btn"
+        target="_blank"
+        href="https://www.google.com/maps/search/?api=1&query=MAN+FASHION+WEAR+Deoria+Uttar+Pradesh">
+            📍 Get Directions
+        </a>
+
+    </div>
+
+    <div class="contact-card">
+
+        <h3>Let's Connect</h3>
+
+        <div class="contact-item">
+            <strong>WhatsApp</strong>
+            <span>Send us an enquiry anytime.</span>
+        </div>
+
+        <div class="contact-item">
+            <strong>Fashion Enquiries</strong>
+            <span>Ask about sizes, products and availability.</span>
+        </div>
+
+        <br>
+
+        <a
+        class="btn btn-dark"
+        href="javascript:void(0)"
+        onclick="openWhatsApp()">
+            💬 Chat on WhatsApp
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+    <div class="small-title">
+        MAN FASHION WEAR
+    </div>
+
+    <h2>
+        Your Style.<br>
+        Your Identity.
+    </h2>
+
+    <p>
+        Discover your next favourite look in Deoria.
+    </p>
+
+    <a href="#shop" class="btn btn-dark">
+        Explore Collection →
+    </a>
+
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+    <div class="footer-brand">
+
+        <h2>
+            MAN <span>FASHION WEAR</span>
+        </h2>
+
+        <p>
+            Premium men's fashion for modern everyday style.
+            Visit us in Deoria and discover the latest collection.
+        </p>
+
+    </div>
+
+    <div class="footer-col">
+
+        <h4>Quick Links</h4>
+
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+    <div class="footer-col">
+
+        <h4>Store</h4>
+
+        <a href="#contact">📍 Deoria, Uttar Pradesh</a>
+        <a href="#contact">🕐 10 AM – 9:30 PM</a>
+        <a href="javascript:void(0)" onclick="openWhatsApp()">💬 WhatsApp</a>
+
+    </div>
+
+</div>
+
+<div class="copyright">
+    © 2026 MAN FASHION WEAR • Deoria. All Rights Reserved.
+</div>
+
+</div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a
+href="javascript:void(0)"
+onclick="openWhatsApp()"
+class="whatsapp"
+aria-label="WhatsApp">
+    💬
+</a>
+
+<script>
+
+/* ==========================================
+   IMPORTANT:
+   Replace this number with shop's WhatsApp
+   Example: 919876543210
+========================================== */
+
+const whatsappNumber = "91XXXXXXXXXX";
+
+function openWhatsApp(){
+
+    const message =
+    "Hello MAN FASHION WEAR, I want to know more about your collection.";
+
+    const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+function orderProduct(productName){
+
+    const message =
+    "Hello MAN FASHION WEAR, I am interested in: " +
+    productName +
+    ". Please share more details.";
+
+    const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>
